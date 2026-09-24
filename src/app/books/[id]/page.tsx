@@ -1,3 +1,5 @@
+import ReadButton from '@/components/ReadButton';
+import WishListButton from '@/components/WishListButton';
 import { Ibook } from '@/types/books.type';
 import Image from 'next/image';
 import React from 'react';
@@ -114,12 +116,8 @@ const BooksPage = async ({ params }: BooksPageProps) => {
 
           
           <div className="flex items-center gap-4 mt-8">
-            <button className="px-7 py-3 rounded-xl border border-gray-300 bg-white font-bold text-[#131313] hover:bg-gray-50 transition-colors">
-              Read
-            </button>
-            <button className="px-7 py-3 rounded-xl bg-[#59C6D2] hover:bg-[#43aeb9] text-white font-bold transition-colors">
-              Wishlist
-            </button>
+            <ReadButton book={book} />
+            <WishListButton book={book}/>
           </div>
 
         </div>
