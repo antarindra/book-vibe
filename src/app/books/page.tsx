@@ -1,7 +1,7 @@
 
 import React from "react";
 import Image from "next/image";
-import BookCard from "../shared/BookCard";
+import BookCard from "@/components/shared/BookCard";
 import { Ibook } from "@/types/books.type";
 
 const getBooks = async () => {
@@ -24,11 +24,11 @@ const HomePageBooks = async () => {
             
             <div className="text-center mb-12">
                 <span className="inline-block text-sm font-semibold tracking-wider uppercase text-green-600 mb-3">
-                    Explore Our Collection
+                    Explore All Books
                 </span>
 
                 <h2 className="text-4xl md:text-5xl font-bold text-[#131313] font-serif">
-                    Popular Books
+                    All Books
                 </h2>
 
                 <p className="max-w-2xl mx-auto mt-4 text-gray-500 text-base md:text-lg">
@@ -38,8 +38,8 @@ const HomePageBooks = async () => {
             </div>
 
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
-                {booksData.slice(0,6).map((book: Ibook) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+                {booksData.map((book: Ibook) => (
                     <BookCard key={book.bookId} book={book} />
                 ))}
             </div>
