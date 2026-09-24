@@ -50,7 +50,7 @@ const ListedBooksPage = () => {
     <div className="max-w-6xl mx-auto px-4 py-8">
    
       <div className="bg-gray-100/80 rounded-2xl py-8 text-center mb-6">
-        <h1 className="text-3xl font-bold text-[#131313]">Books</h1>
+        <h1 className="text-3xl font-bold text-[#131313]">Listed Books</h1>
       </div>
 
      
